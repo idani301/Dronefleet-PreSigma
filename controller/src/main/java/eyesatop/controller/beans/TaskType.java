@@ -1,0 +1,15 @@
+package eyesatop.controller.beans;
+
+public enum TaskType {
+    TAKEOFF,
+    LAND,
+    GOTO_POINT,
+    SET_CAMERA_MODE,
+    START_RECORDING,
+    STOP_RECORDING,
+    TAKE_PHOTO,
+    SET_FLIGHT_LIMITATION_ENABLED,
+    SET_MAX_DISTANCE_FROM_HOME,
+    SET_MAX_ALTITUDE_FROM_HOME,
+    SET_HOME_LOCATION;
+}

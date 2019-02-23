@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    testImplementation 'junit:junit:4.12'
+    implementation project(path: ':controller-abstract')
+    implementation project(':controller')
+    implementation project(':utils')
+    implementation project(':math-util-new')
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.8.6'
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

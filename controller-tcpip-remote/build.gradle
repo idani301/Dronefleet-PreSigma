@@ -1,0 +1,14 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':utils')
+    implementation project(':controller')
+    implementation project(':landingpad')
+    implementation project(':controller-mock')
+    implementation project(':controller-tcpip-common')
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.8.6'
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

@@ -1,0 +1,12 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':landingpad')
+    implementation project(':utils')
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.8.6'
+    implementation project(':math-util-new')
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
