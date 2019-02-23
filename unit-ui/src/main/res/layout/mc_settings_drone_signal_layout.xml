@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:weightSum="1.5">
+
+    <TextView
+        android:id="@+id/signalDroneName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_weight="0.5"
+        android:text="Yellow Drone"
+        android:textColor="@color/white_indicator" />
+
+    <LinearLayout
+        android:id="@+id/infoSignal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/infoSignalStrength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="100%"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white_indicator" />
+
+        <ImageView
+            android:id="@+id/imageSignal1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="0dp"
+            android:src="@drawable/info" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/signal"
+            android:layout_marginLeft="0dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/videoSignal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/videoSignalStrength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="100%"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white_indicator" />
+
+        <ImageView
+            android:id="@+id/imageSignal2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="0dp"
+            android:src="@drawable/video" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/signal"
+            android:layout_marginLeft="0dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

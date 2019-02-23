@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_transparency_20"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/black"
+            android:gravity="center"
+            android:text="Flight Checklist"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/ivCloseButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/close_white" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/overallContainer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/headerContainer"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="Overall Status"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tvOverallStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="OK"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/goButton"
+        android:layout_below="@+id/overallContainer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tvHeader"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.13"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Switch position"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvSwitchPosition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="F mode"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.13"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="SD Card"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvSdCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="125MB/256MB"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.13"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Camera"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvCamera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Available"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.13"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Gimbal"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvGimbal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Available"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.13"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Flight"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvFlight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Available"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.13"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Readt To Take Off"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvReadyToTakeOff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Ready"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.13"
+                android:background="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/goButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        android:text="GO       (3)" />
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/attributeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="20dp"
+            android:layout_toLeftOf="@+id/ivMoveDown"
+            android:gravity="center_vertical|left"
+            android:maxLines="3"
+            android:scrollbars="vertical"
+            android:text="Attribute but very very very very large"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/duplicate"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@+id/ivMoveDown"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/duplicate_icon" />
+
+        <ImageView
+            android:id="@+id/ivMoveDown"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_toLeftOf="@+id/ivMoveUp"
+            android:rotation="90"
+            android:src="@drawable/arrow" />
+
+        <ImageView
+            android:id="@+id/ivMoveUp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/delete"
+            android:rotation="270"
+            android:src="@drawable/arrow" />
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/close_white" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="70dp"
+    android:layout_height="50dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:orientation="vertical"
+    android:background="@color/status_bar">
+
+    <include
+        android:id="@+id/battery"
+        layout="@layout/drone_tab_battery_bar"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_margin="2dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/drone"
+            android:alpha=".75"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="A"
+            android:textColor="@color/foreground"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            />
+    </FrameLayout>
+</LinearLayout>

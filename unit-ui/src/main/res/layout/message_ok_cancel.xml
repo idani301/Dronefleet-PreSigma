@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="280dp"
+        android:layout_height="218dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/black_transparency_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.512">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/massageImage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="0.42"
+                android:src="@drawable/btn_takeoff_orange" />
+
+            <TextView
+                android:id="@+id/massageHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set current RC location as the\nHome Point"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/messageLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_light"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_weight="1" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <TextView
+                    android:id="@+id/massageBodyText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Home Point will be set to your\ncurrent position. The distance\nbetween your position and\nHome Point is 2.1m.\nPlease confirm the setting."
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="0dp" />
+            </ScrollView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/buttonOkMassageType1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corner"
+                        android:gravity="center"
+                        android:text="OK"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/buttonCancelLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/buttonCancelMassageType1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corner"
+                        android:gravity="center_vertical|center"
+                        android:text="Cancel"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

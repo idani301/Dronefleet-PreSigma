@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:gravity="center"
+    android:alpha="1"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/attributeNameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/clearFieldButton"
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/clear"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/attributeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:alpha="1"
+            android:text="Attribute"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_mapping_menu" />
+
+        <Spinner
+            android:id="@+id/attributeSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            />
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/attributeSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_toLeftOf="@+id/linearLayout4"
+        android:layout_toStartOf="@+id/linearLayout4"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout4"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:id="@+id/minusAttributeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/minus_pitch" />
+
+        <EditText
+            android:id="@+id/inputAttributeEditText"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/edit_text_borderline_mc_setting"
+            android:ems="10"
+            android:inputType="number"
+            android:text="10"
+            android:imeOptions="actionDone"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_mapping_menu" />
+
+        <ImageView
+            android:id="@+id/plusAttributeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/plus_pitch" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

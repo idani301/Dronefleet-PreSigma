@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectangle_transparency_80"
+    android:clickable="true">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        android:text="Network Configuration"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+        <RadioButton
+            android:id="@+id/radioHotSpot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Hot Spot"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/radioWiFi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wi Fi"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/radioEthernet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ethernet"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            android:text="Network Name: "
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tvWifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="EyesAtTop 5.2 "
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewWifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/hotspotContainer"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/etHotspotName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="hotspot name"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etHotspotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="hotspot password"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/etHotspotName" />
+
+        <Button
+            android:id="@+id/buttonHotSpotOk"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="OK"
+            app:layout_constraintTop_toBottomOf="@+id/etHotspotPassword" />
+
+        <Button
+            android:id="@+id/buttonHotSpotCancel"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="CANCEL"
+            app:layout_constraintLeft_toRightOf="@+id/buttonHotSpotOk"
+            app:layout_constraintTop_toBottomOf="@+id/etHotspotPassword" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

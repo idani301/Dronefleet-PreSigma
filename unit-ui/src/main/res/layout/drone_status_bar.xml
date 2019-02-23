@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/droneStatusBar"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_alignParentTop="true"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/status_view"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/img_stts_bkgd_green_design"
+        android:ellipsize="marquee"
+        android:gravity="left|center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:text="In-Flight (GPS)"
+        android:textColor="@color/white"
+        android:textSize="12dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/mc_menu_button"
+        android:layout_toRightOf="@+id/status_view"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/drone_view"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/img_drn_gps"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/pingContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="PING:"
+                        android:textColor="@color/white_indicator"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/pingText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="0"
+                        android:textColor="@color/white_indicator" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/rcBatteryContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rcBatteryStatusBarImageView"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/rc_power_icon_red" />
+
+                    <TextView
+                        android:id="@+id/rcBatteryStatusBarTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="N/A"
+                        android:textColor="@color/white_indicator" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/batteryViewLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/droneBatteryImageView"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/bat_ok" />
+
+                    <TextView
+                        android:id="@+id/battery_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:text="100%"
+                        android:textColor="@color/orange_indicator" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/virtualRCConnectedContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="V_RC:"
+                        android:textColor="@color/white_indicator"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/virtualRCConnectedText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Yes"
+                        android:textColor="@color/white_indicator" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/fromTakeOffAltitudeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="ATL:"
+                        android:textColor="@color/white_indicator"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/aboveTakeOffAltitude"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="500.5ft"
+                        android:textColor="@color/white_indicator" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/heightLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="AGL:"
+                        android:textColor="@color/white_indicator"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/droneHeightInMeter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="500.5ft"
+                        android:textColor="@color/white_indicator" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/distanceLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="D:"
+                        android:textColor="@color/white_indicator"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/distanceFromHomeInMeters"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="1.2m"
+                        android:textColor="@color/white_indicator" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/horizontalSpeedLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="4dp"
+                        android:src="@drawable/horizontal_speed" />
+
+                    <TextView
+                        android:id="@+id/velocityInMeterForSecondHorizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="1.2"
+                        android:textColor="@color/white_indicator" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/droneHeadingLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="4dp"
+                        android:src="@drawable/compass" />
+
+                    <TextView
+                        android:id="@+id/droneHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="298"
+                        android:textColor="@color/white_indicator" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/crosshairDTM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="4dp"
+                        android:src="@drawable/height" />
+
+                    <TextView
+                        android:id="@+id/crosshairDTMText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="1.2"
+                        android:textColor="@color/white_indicator" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ascLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="ASC:"
+                        android:textColor="@color/white_indicator"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ascText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="500.5ft"
+                        android:textColor="@color/white_indicator" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cameraPitchLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="4dp"
+                        android:src="@drawable/pitch" />
+
+                    <TextView
+                        android:id="@+id/cameraPitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="65"
+                        android:textColor="@color/white_indicator" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gpsContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/satellite_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="4dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_topbar_gps_nor" />
+
+                    <TextView
+                        android:id="@+id/satelliteUnknownText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="N/A"
+                        android:textColor="@color/white_indicator"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/satelliteKnownContainer"
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/satellite_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_topbar_signal_level_0" />
+
+                        <TextView
+                            android:id="@+id/tvGpsNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="22"
+                            android:textColor="@color/white"
+                            android:textSize="8dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/controllerSignalContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/controllerSignalIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_topbar_remote_nor" />
+
+                    <TextView
+                        android:id="@+id/controllerSignalUnknownText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="N/A"
+                        android:textColor="@color/white_indicator"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/remote_controller_view"
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_topbar_signal_level_0" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivWifi"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/ic_topbar_wifi_level_5" />
+            </LinearLayout>
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/mc_menu_button"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_more_horiz_white" />
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mapOverViewLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        class="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fakemap" />
+
+    <ImageView
+        android:id="@+id/openMapButtons"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/self_location" />
+
+
+    <LinearLayout
+        android:id="@+id/mapControllerButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/openMapButtons"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/black_transparency_30"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/mapSelfLocationFocus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/user_location_squared"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/mapHomeLocationFocus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/home_location_squared"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/mapDroneLocationFocus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/drone_location_squared" />
+    </LinearLayout>
+
+</RelativeLayout>

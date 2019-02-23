@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/videoMapButtons">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:background="@color/black_transparency_80">
+
+                <ImageView
+                    android:id="@+id/powerButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/power" />
+
+                <ImageView
+                    android:id="@+id/internalRecord"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="25dp"
+                    android:src="@drawable/rec" />
+
+                <ImageView
+                    android:id="@+id/swapButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/reload" />
+
+                <ImageView
+                    android:id="@+id/anyvisionButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/vision" />
+
+
+                <ImageView
+                    android:id="@+id/flyToButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="25dp"
+                    android:src="@drawable/btn_fly_to" />
+
+                <ImageView
+                    android:id="@+id/takeOffButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="25dp"
+                    android:src="@drawable/btn_takeoff" />
+
+                <ImageView
+                    android:id="@+id/landButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="25dp"
+                    android:src="@drawable/btn_rth"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/specialFunctionsButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="25dp"
+                    android:src="@drawable/menu"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/stickButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="25dp"
+                    android:src="@drawable/gamepad"
+                    android:visibility="gone" />
+
+
+                <ImageView
+                    android:id="@+id/confirmLandButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="25dp"
+                    android:src="@drawable/confirm_land"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/stopFlightButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="25dp"
+                    android:src="@drawable/red_stop"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/stopUnitButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="25dp"
+                    android:src="@drawable/stop"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/videoMapButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_transparency_80"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/changeScreenModeButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/map" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="foreground">#FFFFFF</color>
+    <color name="primary">#00739A99</color>
+    <color name="secondary">#000B3459</color>
+    <color name="status_bar">#739A99</color>
+    <color name="action_menu">#0B3459</color>
+
+    <color name="disabled">#5B5B5B</color>
+    <color name="background">#000000</color>
+    <color name="orange">#ffba00</color>
+    <color name="cyan">#00ffff</color>
+    
+    <color name="ok_button_background">#00ffffff</color>
+
+    <color name="white">#ffffff</color>
+
+
+    <color name="red_indicator">#ff0004</color>
+    <color name="green_indicator">#0ae686</color>
+    <color name="component_edit_header">#0ae686</color>
+    <color name="white_indicator">#ffffff</color>
+
+    <color name="black">#000000</color>
+    <color name="gray">#DCDCDC</color>
+
+    <color name="black_transparency_90">#10000000</color>
+    <color name="black_transparency_80">#33000000</color>
+    <color name="black_transparency_77">#3A000000</color>
+    <color name="black_transparency_50">#80000000</color>
+    <color name="black_transparency_30">#B3000000</color>
+    <color name="black_transparency_20">#CC000000</color>
+    <color name="full_transparency">#00000000</color>
+
+    <color name="dark_green">#04B431</color>
+    <color name="dark_red">#B40404</color>
+
+    <color name="orange_indicator">#ffa500</color>
+</resources>

@@ -1,5 +1,6 @@
 package eyesatop.ui_generic.viewmodels;
 
+import android.text.Editable;
 import android.text.InputType;
 import android.view.KeyEvent;
 import android.view.inputmethod.EditorInfo;
@@ -67,6 +68,11 @@ public class EditTextViewModel extends AbstractViewModel<EditText> {
         });
     }
 
+    public String getViewText(){
+        Editable editable = view().getText();
+        return editable == null ? null : editable.toString();
+    }
+
     public Property<Integer> inputType() {
         return inputType;
     }
@@ -82,5 +88,4 @@ public class EditTextViewModel extends AbstractViewModel<EditText> {
     public void setOnTextListener(EditTextTextWritten newListener){
         onTextWrittenListener.set(newListener);
     }
-
 }

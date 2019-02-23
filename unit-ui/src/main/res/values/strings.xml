@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">unit-ui</string>
+    <string name ="unknown">N/A</string>
+    <string name="percent">%d%%</string>
+    <string name="slide_take_off">Slide to Take-off &#x3e;&#x3e;</string>
+    <string name="distance_units">Distance Units</string>
+</resources>

@@ -1,0 +1,1423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mcSettingMenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:weightSum="4">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_weight="3"
+        android:background="@color/black_transparency_20"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layoutMcSettingsOptions"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/flightLimitationBtn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_topbar_flight_mode" />
+
+
+            <ImageView
+                android:id="@+id/mcSettingLiveStreamButton"
+                android:layout_width="20dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/live_streaming" />
+
+            <ImageView
+                android:id="@+id/mcSettingSensorsButton"
+                android:layout_width="20dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/visual_enable" />
+
+            <ImageView
+                android:id="@+id/mcSettingBatteryButton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_camera_setting_battery" />
+
+            <ImageView
+                android:id="@+id/imageViewReleaseNotes"
+                android:layout_width="25dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/doc" />
+
+            <ImageView
+                android:id="@+id/imageViewSettings"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/settings" />
+
+            <ImageView
+                android:id="@+id/sdCardSettingButton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/sd_card" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:alpha="0.2"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/LinearLayoutMcSettingsHeader"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/black_transparency_90"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mcSettingHeaderTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/mc_menu_close_button"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="MC Settings"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:id="@+id/mc_menu_close_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/close_white" />
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/settingsContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/black_transparency_90"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/HomePointSettingtxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:text="Home Point Settings"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:gravity="right"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                tools:layout_editor_absoluteY="8dp">
+
+                                <ImageView
+                                    android:id="@+id/droneHomePointFromLanding"
+                                    android:layout_width="@dimen/icon_width_mc_settings_width"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/drone_white" />
+
+                                <ImageView
+                                    android:id="@+id/homeDronePointFromController"
+                                    android:layout_width="@dimen/icon_width_mc_settings_width"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/go_home_person_white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/space_mc_settings" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/black_transparency_90"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/returnToHomeAltTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:text="Return-to-Home Altitude"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:gravity="right"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                tools:layout_editor_absoluteY="8dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="(20-500m)"
+                                    android:textColor="@android:color/white"
+                                    tools:layout_editor_absoluteX="310dp"
+                                    tools:layout_editor_absoluteY="89dp" />
+
+                                <EditText
+                                    android:id="@+id/editTextReturnToHomeAltitude"
+                                    android:layout_width="@dimen/text_edit_mc_settings_width"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edit_text_borderline_mc_setting"
+                                    android:ems="10"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="number"
+                                    android:text="30"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/holo_blue_bright"
+                                    tools:layout_editor_absoluteX="388dp"
+                                    tools:layout_editor_absoluteY="101dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="m"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="@dimen/mc_setting_menu_txt"
+                                    tools:layout_editor_absoluteX="494dp"
+                                    tools:layout_editor_absoluteY="95dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/space_mc_settings" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/black_transparency_90"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/maxAltSettingTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:text="Maximum Altitude"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:gravity="right"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                tools:layout_editor_absoluteY="8dp">
+
+                                <TextView
+                                    android:id="@+id/textView8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="(20-500m)"
+                                    android:textColor="@android:color/white"
+                                    tools:layout_editor_absoluteX="310dp"
+                                    tools:layout_editor_absoluteY="89dp" />
+
+                                <EditText
+                                    android:id="@+id/editTextMaxAlt"
+                                    android:layout_width="@dimen/text_edit_mc_settings_width"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edit_text_borderline_mc_setting"
+                                    android:ems="10"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="number"
+                                    android:text="30"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/holo_blue_bright"
+                                    tools:layout_editor_absoluteX="388dp"
+                                    tools:layout_editor_absoluteY="101dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="m"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="@dimen/mc_setting_menu_txt"
+                                    tools:layout_editor_absoluteX="494dp"
+                                    tools:layout_editor_absoluteY="95dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/space_mc_settings" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/black_transparency_90"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/distnaceLimitUpTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:text="Distance Limit"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:gravity="right"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                tools:layout_editor_absoluteY="8dp">
+
+                                <Switch
+                                    android:id="@+id/switchIsDistanceLimitOn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:checked="true" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/space_mc_settings" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/black_transparency_90"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/MaxFlightDisSettingTxt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_weight="1"
+                                android:text="Maximum Flight Distance"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <Space
+                                android:layout_width="@dimen/space_mc_settings"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <Space
+                                android:layout_width="@dimen/space_mc_settings"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:gravity="right"
+                                android:orientation="horizontal"
+                                app:layout_constraintRight_toRightOf="parent"
+                                tools:layout_editor_absoluteY="8dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="(15-8000m)"
+                                    android:textColor="@android:color/white"
+                                    tools:layout_editor_absoluteX="310dp"
+                                    tools:layout_editor_absoluteY="89dp" />
+
+                                <EditText
+                                    android:id="@+id/editTextMaxDistanceFlight"
+                                    android:layout_width="@dimen/text_edit_mc_settings_width"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edit_text_borderline_mc_setting"
+                                    android:ems="10"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="number"
+                                    android:text="5000"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/holo_blue_bright"
+                                    tools:layout_editor_absoluteX="388dp"
+                                    tools:layout_editor_absoluteY="101dp" />
+
+                                <TextView
+                                    android:id="@+id/textView7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="m"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="@dimen/mc_setting_menu_txt"
+                                    tools:layout_editor_absoluteX="494dp"
+                                    tools:layout_editor_absoluteY="95dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_marginTop="50dp"
+                        android:id="@+id/tvReleaseNotes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:text="Lorem ipsum"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/liveStreamContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="Available URL : "
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/mc_setting_menu_txt" />
+
+                                <TextView
+                                    android:id="@+id/liveStreamUrls"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/mc_setting_menu_txt"
+                                    >
+                                </TextView>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="Request URL : "
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/mc_setting_menu_txt" />
+
+                                <EditText
+                                    android:id="@+id/urlEditText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/edit_text_borderline_mc_setting"
+                                    android:ems="10"
+                                    android:imeOptions="actionDone"
+                                    android:text=""
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/holo_blue_bright" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="Is Streaming : "
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+
+
+                            <TextView
+                                android:id="@+id/liveStreamIsStreamingText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="Yes"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="Current URL : "
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+
+
+                            <TextView
+                                android:id="@+id/liveStreamCurrentURLTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="rtmp://192.168.20.101:1935/live"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="Video Bit : "
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+
+
+                            <TextView
+                                android:id="@+id/liveStreamVideoBitRateText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="315"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+
+                        </RelativeLayout>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/liveStreamStartStreamButton"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/go" />
+
+                            <ImageView
+                                android:id="@+id/liveStreamStopStreamButton"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/stop" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/generalSettingsContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_margin="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/black_transparency_90"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/takeOffAltitudeText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:text="Take Off Altitude : "
+                                    android:textColor="@android:color/white"
+                                    android:textSize="@dimen/mc_setting_menu_txt"
+                                    />
+
+                                    <EditText
+                                        android:id="@+id/takeOffAltitudeEditText"
+                                        android:layout_width="@dimen/text_edit_mc_settings_width"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/edit_text_borderline_mc_setting"
+                                        android:ems="10"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="number"
+                                        android:text="30"
+                                        android:textAlignment="center"
+                                        android:textColor="@android:color/holo_blue_bright" />
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:visibility="gone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="Distance units"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:visibility="gone"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:text="Feet"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/mc_setting_menu_txt" />
+
+                                <Switch
+                                    android:id="@+id/switchDistanceUnits"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:checked="true" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:text="Meter"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/mc_setting_menu_txt" />
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/sdCardContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/delete"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/format_sd_card" />
+
+                            <TextView
+                                android:id="@+id/tvDelete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="Format SD Card"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/recordTimeContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="Record Time Remaining:"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+
+                            <TextView
+                                android:id="@+id/tvSDCardRecordTimeRemaining"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="22:15"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/sdCardCapacityContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="Storage Remaining:"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+
+
+                            <TextView
+                                android:id="@+id/tvSdCardSpaceRemaining"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="115GB/128GB"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/visualContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="Enable Obstacle Avoidance"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/obstacleSwitch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:alpha="0.2"
+                            android:background="@color/white" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="Display Radar Chart"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/radarSwitch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:alpha="0.2"
+                            android:background="@color/white" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="Enable Horizontal Obstacle Avoidance in TapFly"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/horizontalObstacleSwitch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:alpha="0.2"
+                            android:background="@color/white" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="Enable Backward Flying in ActiveTrack"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/backwardFlyingSwitch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:alpha="0.2"
+                            android:background="@color/white" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="Enable Obstacle Avoidance in ActiveTrack"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/obstacleAvoidanceSwitch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:alpha="0.2"
+                            android:background="@color/white" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="Enable Downward Vision Positioning"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/downWardVisionSwitch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:alpha="0.2"
+                            android:background="@color/white" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="Precision Landing"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/precisionLandingSwitch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:alpha="0.2"
+                            android:background="@color/white" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="RTH Obstacle Detection"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/rthObstacleSwitch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:alpha="0.2"
+                            android:background="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/batteryContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="Voltage"
+                                    android:textColor="@color/white" />
+
+                                <TextView
+                                    android:id="@+id/tvVoltage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="26.5 v"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/mc_setting_menu_txt" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="Temperature"
+                                    android:textColor="@color/white" />
+
+                                <TextView
+                                    android:id="@+id/tvTemperature"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="30 °C"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/mc_setting_menu_txt" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:alpha="0.2"
+                            android:background="@color/white" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="Remaining Power"
+                                    android:textColor="@color/white" />
+
+                                <TextView
+                                    android:id="@+id/tvRemainingPower"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="2124mAh"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/mc_setting_menu_txt" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="Total Capacity"
+                                    android:textColor="@color/white" />
+
+                                <TextView
+                                    android:id="@+id/tvTotalCapacity"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="3806mAh"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/mc_setting_menu_txt" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:alpha="0.2"
+                            android:background="@color/white" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="Smart Return Home"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true" />
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/smartReturnHomeSwitch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:alpha="0.2"
+                            android:background="@color/white" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvCriticalBatteryWarning"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="Critical Battery Warning"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+
+                            <SeekBar
+                                android:id="@+id/criticalBatteryWarningSeekBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/tvCriticalBatteryWarningPrec"
+                                android:layout_toRightOf="@+id/tvCriticalBatteryWarning" />
+
+                            <TextView
+                                android:id="@+id/tvCriticalBatteryWarningPrec"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="10%"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:alpha="0.2"
+                            android:background="@color/white" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvLowBatteryWarning"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="Low Battery Warning"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+
+                            <SeekBar
+                                android:id="@+id/lowBatteryWarningSeekBar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/tvLowBatteryWarningPrec"
+                                android:layout_toRightOf="@+id/tvLowBatteryWarning" />
+
+                            <TextView
+                                android:id="@+id/tvLowBatteryWarningPrec"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="10%"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:alpha="0.2"
+                            android:background="@color/white" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="Flight Time"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+
+                            <TextView
+                                android:id="@+id/tvFlightTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:text="00:00"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:alpha="0.2"
+                            android:background="@color/white" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="Show Voltage On Main Screen"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true" />
+
+                            <android.support.v7.widget.SwitchCompat
+                                android:id="@+id/showVoltageSwitch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:alpha="0.2"
+                            android:background="@color/white" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="Time To Discharge"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/mc_setting_menu_txt"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true" />
+
+                            <android.support.v7.widget.AppCompatSpinner
+                                android:id="@+id/dischargeSpinner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:alpha="0.2"
+                            android:background="@color/white" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

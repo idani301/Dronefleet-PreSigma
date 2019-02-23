@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sightScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="5dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:background="@color/black_transparency_50"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ED50:"
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="@dimen/sight_tet_size_title" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="@dimen/space_size_on_sight_title1"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="N: "
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="@dimen/sight_tet_size_title" />
+
+                <TextView
+                    android:id="@+id/sightNorthEd50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="3478898"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/sight_tet_size_title" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="@dimen/space_size_on_sight_title1"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="E:"
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="@dimen/sight_tet_size_title" />
+
+                <TextView
+                    android:id="@+id/sightEastEd50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="717367"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/sight_tet_size_title" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@color/black_transparency_50"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="D:"
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="@dimen/sight_txt_size" />
+
+                <TextView
+                    android:id="@+id/sightDistanceFromTarget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="207"
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="@dimen/sight_txt_size" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="@dimen/space_size_on_sight_title1"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView1234"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="H:"
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="@dimen/sight_txt_size" />
+
+                <TextView
+                    android:id="@+id/sightHeightFromTarget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="85"
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="@dimen/sight_txt_size" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="@dimen/space_size_on_sight_title1"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView1235"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Az:"
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="@dimen/sight_txt_size" />
+
+                <TextView
+                    android:id="@+id/sightAzimuthFromTarget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="189"
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="@dimen/sight_txt_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@color/black_transparency_50"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sightBattery"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:drawableStart="@drawable/bat_ok"
+                android:gravity="center_vertical"
+                android:text="100%"
+                android:textColor="@color/orange_indicator"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/mc_menu_button"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/black_transparency_50"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|fill_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="D: "
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sight_txt_size" />
+
+            <TextView
+                android:id="@+id/sightDistnaceFromHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1999"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sight_txt_size" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="@dimen/space_size_on_sight"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="H: "
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sight_txt_size" />
+
+            <TextView
+                android:id="@+id/sightHeightFromHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="259"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sight_txt_size" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="@dimen/space_size_on_sight"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Az: "
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sight_txt_size" />
+
+            <TextView
+                android:id="@+id/sightAzimuthFromHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="340"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sight_txt_size" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/sight_draw_borderline_type1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>

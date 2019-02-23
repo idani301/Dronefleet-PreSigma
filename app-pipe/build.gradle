@@ -9,7 +9,7 @@ android {
     compileSdkVersion compile_sdk_version_param
 
     defaultConfig {
-        applicationId "eyesatop.pipeapp"
+        applicationId "eyesatop.pipeapp2"
         minSdkVersion min_sdk_version_param
         targetSdkVersion target_sdk_version_param
         multiDexEnabled true
@@ -46,7 +46,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation "com.android.support:appcompat-v7:${app_compact_param}"
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

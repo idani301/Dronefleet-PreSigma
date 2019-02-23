@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="crosshair_start_margin">82.5dp</dimen>
+  <dimen name="crosshair_bottom_margin">45dp</dimen>
+  <dimen name="crosshair_top_margin">45dp</dimen>
+  <dimen name="crosshair_end_margin">82.5dp</dimen>
+  <dimen name="header_height">33dp</dimen>
+  <dimen name="header_text_size">15sp</dimen>
+  <dimen name="crosshair_info_text_size">22sp</dimen>
+  <dimen name="small_view_width">160dp</dimen>
+  <dimen name="small_view_width_gone">180dp</dimen>
+  <dimen name="small_view_height">100dp</dimen>
+
+  <dimen name="radar_margin">10dp</dimen>
+
+  <dimen name="obli_menu_text">20sp</dimen>
+  <dimen name="drone_status_text">15sp</dimen>
+  <dimen name="take_off_headline_txt">20sp</dimen>
+  <dimen name="take_off_main_txt">14sp</dimen>
+  <dimen name="mc_setting_menu_txt">15sp</dimen>
+  <dimen name="info_menu_size_text">15sp</dimen>
+  <dimen name="sight_txt_size">20sp</dimen>
+  <dimen name="sight_tet_size_title">14sp</dimen>
+  <dimen name="target_status_text_size">16sp</dimen>
+
+
+  <dimen name="bot_button">40dp</dimen>
+  <dimen name="main_menu_button">120dp</dimen>
+  <dimen name="return_button">30dp</dimen>
+  <dimen name="action_manu_button">50dp</dimen>
+  <dimen name="icon_width_mc_settings_width">50dp</dimen>
+  <dimen name="icon_mc_settings_layout">50dp</dimen>
+  <dimen name="icon_width_mc_settings_option">40dp</dimen>
+  <dimen name="text_edit_mc_settings_width">80dp</dimen>
+  <dimen name="sight_borderline_left_right">42dp</dimen>
+  <dimen name="sight_borderline_top_bottom">42dp</dimen>
+
+  <dimen name="space_mc_settings">20dp</dimen>
+  <dimen name="space_size_on_sight">20dp</dimen>
+  <dimen name="space_size_on_sight_title1">10dp</dimen>
+
+
+  <dimen name="footer_info_margin">40dp</dimen>
+  <dimen name="footer_value_margin">5dp</dimen>
+  <dimen name="footer_info_value">15sp</dimen>
+  <dimen name="footer_info_title">10sp</dimen>
+
+  <dimen name="slider_width">200dp</dimen>
+  <dimen name="slider_height">25dp</dimen>
+  <dimen name="slider_background_height">13dp</dimen>
+  <dimen name="slider_margin">20dp</dimen>
+  <dimen name="thumb_margins">0dp</dimen>
+  <dimen name="take_off_view_height">175dp</dimen>
+  <dimen name="take_off_view_width">215dp</dimen>
+  <dimen name="take_off_image_margin_top">0dp</dimen>
+  <dimen name="take_off_cancel_padding">10dp</dimen>
+  <dimen name="take_off_text_big">12sp</dimen>
+  <dimen name="take_off_text_small">10sp</dimen>
+
+  <dimen name="space_mapping_menu">15sp</dimen>
+  <dimen name="text_size_mapping_menu">18dp</dimen>
+  <dimen name="text_size_mapping_menu_range">12dp</dimen>
+
+  <dimen name="setting_layout_width">400dp</dimen>
+  <dimen name="zoom_plus_minus">30dp</dimen>
+</resources>

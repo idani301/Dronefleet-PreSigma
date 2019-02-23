@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/renger_ui"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutStutasBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/app_icon"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/img_logo_eyesatop_blue" />
+
+            <include
+                android:id="@+id/includeStatusBar"
+                layout="@layout/drone_status_bar"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/black_transparency_20" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutMapVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/includeMap"
+                layout="@layout/map_over_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="visible"
+                tools:style="@style/AppTheme" />
+
+            <include
+                android:id="@+id/includeCamera"
+                layout="@layout/camera"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutfullScreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/IncludeSightScreen"
+                layout="@layout/sight_screen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/virtualSticksView"
+            layout="@layout/stick_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/includeLittleMessage"
+            layout="@layout/little_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="4dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_toLeftOf="@+id/rightSideContainer"
+        android:layout_toRightOf="@+id/leftSideContainer"
+        android:orientation="horizontal">
+
+        <include
+            android:id="@+id/includePathPlannerLayout"
+            layout="@layout/mission_component_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/includeMainManu"
+            layout="@layout/main_menus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/includeTakeOffSeccureMsg"
+            layout="@layout/take_off_manu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/includeRadiatorMenu"
+            layout="@layout/radiator_planner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/leftSideContainer"
+        layout="@layout/action_menu_drone_left"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/header" />
+
+    <include
+        android:id="@+id/includeMissionPlanner"
+        layout="@layout/mission_planner_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/header"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/includeMissionExecutionMenu"
+        layout="@layout/mission_execution_menu"
+        android:layout_width="370dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/header"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/includeCheckList"
+        layout="@layout/check_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="15dp"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/includeMissionFunction"
+        layout="@layout/mission_function"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/includeMissionAddNew"
+        layout="@layout/mission_add_new"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/includeMcSettingMenu"
+        layout="@layout/mc_settings_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/includeMessage"
+        layout="@layout/message_ok_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/droneAdditionalData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@+id/leftSideContainer"
+        android:background="@drawable/rectangle_transparency_80"
+        android:orientation="horizontal" />
+</RelativeLayout>

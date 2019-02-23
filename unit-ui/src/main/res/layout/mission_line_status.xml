@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/missionLineStatus"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_round_corner"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/missionLineName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:text="Line 1"
+        android:textAlignment="center"
+        android:textColor="@color/white_indicator"
+        android:textStyle="bold" />
+
+    <include
+        layout="@layout/mission_tasks_status"
+        layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible" />
+
+    <include
+        layout="@layout/mission_status"
+        layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible" />
+
+</LinearLayout>

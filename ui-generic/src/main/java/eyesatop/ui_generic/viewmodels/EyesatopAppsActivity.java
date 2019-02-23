@@ -13,6 +13,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -64,6 +65,8 @@ public abstract class EyesatopAppsActivity extends Activity {
     private TextViewModel versionText;
     private SpinnerViewModel spinner;
     private ViewModel appTypeView;
+    private ViewModel droneIDEditTextContainer;
+    private EditTextViewModel droneIDsEditText;
     private final Property<String> networkInfo = new Property<>();
 
     //    private EditTextViewModel editText;
@@ -174,6 +177,9 @@ public abstract class EyesatopAppsActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(loadingPageLayout());
+
+        this.droneIDEditTextContainer = new ViewModel(findViewById(R.id.droneIDEditTextContainer));
+        this.droneIDsEditText = new EditTextViewModel((EditText) findViewById(R.id.droneIDEditText));
 
         appTypeView = new ViewModel(findViewById(R.id.appTypeContainer));
         spinner = new SpinnerViewModel((Spinner) findViewById(R.id.applicationTypeSpinner),ApplicationType.values());
@@ -334,9 +340,21 @@ public abstract class EyesatopAppsActivity extends Activity {
         dialog.show();
     }
 
+    public ViewModel getDroneIDEditTextContainer() {
+        return droneIDEditTextContainer;
+    }
+
+    public EditTextViewModel getDroneIDsEditText() {
+        return droneIDsEditText;
+    }
+
     protected ObservableValue<String> getNetworkInfo() {
         return networkInfo;
     }
 
     public abstract List<String> permissionsRequired();
+
+    public static List<Integer> main(){
+        return null;
+    }
 }

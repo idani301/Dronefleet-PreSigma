@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:layout_margin="3dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/missionName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Fly to"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/white"
+        android:layout_margin="3dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="170dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <include
+            layout="@layout/status_bar_progress"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/backToLineStatus"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="6dp"
+            android:src="@drawable/back" />
+
+    </LinearLayout>
+
+</LinearLayout>

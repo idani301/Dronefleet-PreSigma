@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/black_transparency_80">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="25dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/cameraToVideoButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/btn_cam2vid" />
+
+                <ImageView
+                    android:id="@+id/recordButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/record_button_main" />
+
+                <TextView
+                    android:id="@+id/timeOfReccordText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:text="00:00:00"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/lookAtPointButton"
+                    style="@style/ActionMenuItem"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/rc_lookat_off" />
+
+
+                <ImageView
+                    android:id="@+id/rotateGimbalButton"
+                    style="@style/ActionMenuItem"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/swap_button" />
+
+                <ImageView
+                    android:id="@+id/lockGimbalAtLocation"
+                    style="@style/ActionMenuItem"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/camera_controll_aelock_lock" />
+
+
+                <ImageView
+                    android:id="@+id/exploreButton"
+                    style="@style/ActionMenuItem"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/swap_button" />
+
+                <ImageView
+                    android:id="@+id/stopGimbal"
+                    style="@style/ActionMenuItem"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/stop"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_transparency_80"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/coordinateButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/target"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/ivFullScreen"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/full_screen_icon" />
+    </LinearLayout>
+</RelativeLayout>

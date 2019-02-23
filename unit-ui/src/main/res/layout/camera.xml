@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/videoLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextureView
+        android:id="@+id/cameraVideo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true" />
+
+    <include
+        android:id="@+id/rightSideContainer"
+        layout="@layout/action_menu_drone_right"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true" />
+
+    <LinearLayout
+        android:id="@+id/moreDetailsContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/rectangle_transparency_80"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/heightLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="AGL: "
+                android:textColor="@color/white_indicator"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/videoDroneHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="500.5ft"
+                android:textColor="@color/white_indicator" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivRemoteBatteryVideo"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/rc_power_icon_red" />
+
+            <TextView
+                android:id="@+id/tvRemoteBattery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="N/A"
+                android:textColor="@color/white_indicator" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/batteryViewLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/droneBatteryVideoImageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/bat_ok" />
+
+            <TextView
+                android:id="@+id/battery_view_video"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="100%"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvZoomScale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_toLeftOf="@+id/rightSideContainer"
+        android:background="@drawable/rectangle_transparency_80"
+        android:gravity="center"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="X1"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+
+    <ImageView
+        android:id="@+id/ivNoVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/no_video_gray"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/ivTarget"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/target_icon"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/ivCrosshair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/crosshair"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_transparency_80"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvDroneDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="10m"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tvDroneAzimuth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:gravity="center_horizontal"
+                android:text="15c"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+
+            <ImageView
+                android:id="@+id/targetDistanceFromDroneButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_topbar_flight_mode"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

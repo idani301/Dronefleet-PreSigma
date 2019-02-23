@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+  <corners android:radius="65dp" />
+  <size android:height="@dimen/slider_background_height" />
+  <solid android:color="@color/cyan" />
+</shape>

@@ -1,4 +1,5 @@
-include ':things', ':ui-generic',
+include ':things', ':unit', ':unit-ui', ':imageprocess', ':imageprocess-anyvision-android', ':app-remote',
+        ':ui-generic',
         ':app-pipe',
         ':utils',
         ':math-util-new',

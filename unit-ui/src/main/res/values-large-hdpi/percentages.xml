@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <item name="take_off_margin_start" format="float" type="dimen">0.3</item>
+  <item name="take_off_margin_end" format="float" type="dimen">0.7</item>
+  <item name="take_off_margin_top" format="float" type="dimen">0.2</item>
+  <item name="take_off_margin_bottom" format="float" type="dimen">0.8</item>
+</resources>

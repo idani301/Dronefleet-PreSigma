@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="crosshair_start_margin">165dp</dimen>
+  <dimen name="crosshair_bottom_margin">90dp</dimen>
+  <dimen name="crosshair_top_margin">90dp</dimen>
+  <dimen name="crosshair_end_margin">165dp</dimen>
+  <dimen name="header_height">60dp</dimen>
+  <dimen name="header_text_size">20sp</dimen>
+  <dimen name="small_view_width">320dp</dimen>
+  <dimen name="small_view_width_gone">340dp</dimen>
+  <dimen name="small_view_height">200dp</dimen>
+
+  <dimen name="radar_margin">20dp</dimen>
+
+  <dimen name="bot_button">40dp</dimen>
+
+  <dimen name="footer_info_margin">40dp</dimen>
+  <dimen name="footer_value_margin">5dp</dimen>
+  <dimen name="footer_info_value">30sp</dimen>
+  <dimen name="footer_info_title">20sp</dimen>
+
+  <dimen name="slider_width">400dp</dimen>
+  <dimen name="slider_height">50dp</dimen>
+  <dimen name="slider_background_height">25dp</dimen>
+  <dimen name="slider_margin">20dp</dimen>
+  <dimen name="thumb_margins">1dp</dimen>
+  <dimen name="take_off_view_height">310dp</dimen>
+  <dimen name="take_off_view_width">400dp</dimen>
+  <dimen name="take_off_image_margin_top">5dp</dimen>
+  <dimen name="take_off_cancel_padding">10dp</dimen>
+  <dimen name="take_off_text_big">20sp</dimen>
+  <dimen name="take_off_text_small">16sp</dimen>
+
+  <dimen name="setting_layout_width">400dp</dimen>
+  <dimen name="zoom_plus_minus">60dp</dimen>
+</resources>

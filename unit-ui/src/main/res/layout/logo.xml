@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/logo_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary"
+    android:padding="10dp">
+    <ImageView
+        android:src="@drawable/logo"
+        android:tint="@color/foreground"
+        android:alpha=".75"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>
